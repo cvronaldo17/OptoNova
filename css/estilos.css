@@ -1,0 +1,392 @@
+
+/* ===== COLORES GENERALES ===== */
+:root {
+    --azul: #123B5D;
+    --turquesa: #20B8B0;
+    --fondo: #F3F8FC;
+    --texto: #243746;
+    --blanco: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+/* ===== MENÚ ===== */
+.navbar {
+    background: var(--azul);
+    padding: 16px 0;
+}
+
+.nav-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    color: var(--blanco);
+    font-size: 25px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--turquesa);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+}
+
+.menu a {
+    color: var(--blanco);
+    padding: 9px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a.activo {
+    background: var(--turquesa);
+    color: var(--azul);
+}
+
+/* ===== ENCABEZADOS ===== */
+.seccion {
+    padding: 65px 0;
+}
+
+.etiqueta {
+    display: inline-block;
+    color: var(--turquesa);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+h1, h2, h3 {
+    color: var(--azul);
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: clamp(27px, 4vw, 36px);
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.texto-centro {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 35px;
+}
+
+/* ===== BOTONES ===== */
+.boton {
+    display: inline-block;
+    background: var(--turquesa);
+    color: var(--azul);
+    padding: 13px 22px;
+    border-radius: 10px;
+    font-weight: 800;
+    border: 2px solid var(--turquesa);
+    cursor: pointer;
+    transition: 0.3s;
+    font: inherit;
+    font-weight: 700;
+}
+
+.boton:hover {
+    background: var(--azul);
+    color: var(--blanco);
+    border-color: var(--azul);
+}
+
+.boton-secundario {
+    background: transparent;
+    color: var(--azul);
+    border-color: var(--azul);
+}
+
+/* ===== PORTADA ===== */
+.hero {
+    padding: 85px 0;
+    background:
+        radial-gradient(circle at 85% 20%,
+        rgba(32, 184, 176, 0.16), transparent 35%),
+        var(--fondo);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 45px;
+}
+
+.hero-texto {
+    max-width: 650px;
+}
+
+.hero-imagen {
+    background: var(--azul);
+    color: var(--blanco);
+    padding: 40px 25px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 15px 40px #123b5d25;
+}
+
+.icono-grande {
+    font-size: 90px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.hero-imagen h2 {
+    color: var(--blanco);
+}
+
+.hero-imagen p {
+    color: #e2f5f5;
+}
+
+/* ===== TARJETAS ===== */
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.tarjeta {
+    background: var(--blanco);
+    padding: 28px;
+    border-radius: 18px;
+    border: 1px solid #e0eaf1;
+    box-shadow: 0 8px 25px #123b5d0b;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px #123b5d18;
+}
+
+.icono {
+    width: 58px;
+    height: 58px;
+    display: grid;
+    place-items: center;
+    background: #e2f8f6;
+    border-radius: 15px;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.tarjeta p {
+    font-size: 15px;
+}
+
+.fondo-azul {
+    background: var(--azul);
+    color: var(--blanco);
+    border-radius: 22px;
+    padding: 35px;
+    margin-top: 35px;
+}
+
+.fondo-azul h2,
+.fondo-azul h3 {
+    color: var(--blanco);
+}
+
+/* ===== LISTAS ===== */
+.lista {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.lista li {
+    margin-bottom: 12px;
+}
+
+.lista li::before {
+    content: "✓";
+    color: var(--turquesa);
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+/* ===== FORMULARIO ===== */
+.formulario {
+    background: var(--blanco);
+    padding: 32px;
+    border-radius: 20px;
+    box-shadow: 0 8px 28px #123b5d12;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+}
+
+.campo {
+    margin-bottom: 18px;
+}
+
+.campo label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd9e3;
+    border-radius: 9px;
+    background: var(--blanco);
+    color: var(--texto);
+    font: inherit;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: 2px solid var(--turquesa);
+    border-color: var(--turquesa);
+}
+
+.campo textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+/* ===== PIE DE PÁGINA ===== */
+.footer {
+    background: var(--azul);
+    color: var(--blanco);
+    padding: 28px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer p {
+    margin-bottom: 5px;
+}
+
+.footer a {
+    color: var(--turquesa);
+}
+
+/* ===== ADAPTACIÓN A CELULARES ===== */
+@media (max-width: 800px) {
+    .nav-contenido {
+        flex-direction: column;
+    }
+
+    .menu {
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .menu a {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 50px 0;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .tarjetas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .seccion {
+        padding: 45px 0;
+    }
+}
+
+@media (max-width: 520px) {
+    .contenedor {
+        width: 92%;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .hero-imagen {
+        padding: 30px 18px;
+    }
+
+    .icono-grande {
+        font-size: 70px;
+    }
+
+    .tarjeta,
+    .formulario {
+        padding: 22px;
+    }
+
+    .boton {
+        text-align: center;
+        max-width: 100%;
+    }
+}
